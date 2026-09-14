@@ -76,6 +76,15 @@ p { margin: 0; }
 .cup-rim { stroke: currentColor; stroke-width: 1.6; opacity: 0.55; }
 .cup-fill { fill: var(--tostado); }
 
+.header-cup-steam {
+  fill: none; stroke: var(--tostado); stroke-width: 1.3; stroke-linecap: round;
+  opacity: 0; transform-origin: center bottom;
+  animation: steamRise 3.2s ease-in-out infinite;
+}
+.header-cup-steam:nth-child(1) { animation-delay: 0s; }
+.header-cup-steam:nth-child(2) { animation-delay: 0.7s; }
+.header-cup-steam:nth-child(3) { animation-delay: 1.4s; }
+
 .nav-call {
   display: flex; align-items: center; gap: 0.45rem;
   font-weight: 600; font-size: 0.92rem; text-decoration: none;
@@ -182,9 +191,28 @@ section h2 { font-size: clamp(2rem, 5vw, 2.9rem); overflow: hidden; }
 /* ============ La casa ============ */
 .lugar { background: var(--papel); }
 .lugar-inner { max-width: 42rem; margin: 0 auto; text-align: center; position: relative; }
-.lugar-ring-stamp {
-  width: 5.5rem; height: 5.5rem; border-radius: 50%; border: 3px solid var(--granate-suave);
-  opacity: 0.5; margin: 0 auto 1.6rem;
+.lugar-ring-stamp { width: 5.5rem; height: 5.5rem; margin: 0 auto 1.6rem; }
+.lugar-cup-svg { width: 100%; height: 100%; overflow: visible; }
+.lugar-cup-outline, .lugar-cup-handle, .lugar-cup-rim {
+  fill: none; stroke: var(--granate-suave); stroke-width: 2.2; stroke-linecap: round; opacity: 0.7;
+}
+.lugar-cup-steam {
+  fill: none; stroke: var(--tostado); stroke-width: 2; stroke-linecap: round;
+  opacity: 0; transform-origin: center bottom;
+  animation: steamRise 3.6s ease-in-out infinite;
+}
+.lugar-cup-steam:nth-child(1) { animation-delay: 0s; }
+.lugar-cup-steam:nth-child(2) { animation-delay: 0.8s; }
+.lugar-cup-steam:nth-child(3) { animation-delay: 1.6s; }
+
+@keyframes steamRise {
+  0% { opacity: 0; transform: translateY(6px) scaleY(0.85); }
+  25% { opacity: 0.6; }
+  70% { opacity: 0.28; }
+  100% { opacity: 0; transform: translateY(-6px) scaleY(1.1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .header-cup-steam, .lugar-cup-steam { animation: none; opacity: 0.3; }
 }
 .lugar-lede { font-size: 1.1rem; color: var(--tinta-suave); margin-top: 1.1rem; line-height: 1.6; }
 .lugar-quote {
