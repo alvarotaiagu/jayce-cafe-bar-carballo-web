@@ -1,0 +1,14 @@
+{
+  "name": "Jayce Café-Bar — Carballo",
+  "short_name": "Jayce",
+  "description": "Café, tapeo y terraza en Rúa Río Miño, 18, Carballo. 4,4★ en Google (87 reseñas).",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FFFBF5",
+  "theme_color": "#4E1616",
+  "lang": "es",
+  "icons": [
+    { "src": "assets/img/logo/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

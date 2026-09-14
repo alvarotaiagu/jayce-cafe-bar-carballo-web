@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jayce Café-Bar — Cafetería en Carballo</title>
+<meta name="description" content="Jayce Café-Bar en Carballo: café, tapeo y terraza en Rúa Río Miño, 18. Valorado con 4,4★ en Google (87 reseñas). Comida en el bar y pedidos a domicilio.">
+<link rel="canonical" href="https://alvarotaiagu.github.io/jayce-cafe-bar-carballo-web/">
+<link rel="icon" href="assets/img/logo/icon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#4E1616">
+
+<meta property="og:type" content="restaurant">
+<meta property="og:site_name" content="Jayce Café-Bar">
+<meta property="og:title" content="Jayce Café-Bar — Carballo">
+<meta property="og:description" content="Café, tapeo y terraza en Rúa Río Miño, 18, Carballo. 4,4★ en Google (87 reseñas).">
+<meta property="og:url" content="https://alvarotaiagu.github.io/jayce-cafe-bar-carballo-web/">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Jayce",
+  "url": "https://alvarotaiagu.github.io/jayce-cafe-bar-carballo-web/",
+  "telephone": "+34682120930",
+  "priceRange": "1-10 €",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rúa Río Miño, 18",
+    "addressLocality": "Carballo",
+    "addressRegion": "A Coruña",
+    "postalCode": "15102",
+    "addressCountry": "ES"
+  },
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Terraza", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Comida en el bar", "value": true }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.4",
+    "reviewCount": "87"
+  },
+  "sameAs": [
+    "https://www.facebook.com/p/Cafeter%C3%ADa-Jayce-100083581772036/"
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#contido">Ir al contenido</a>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#top" aria-label="Jayce, ir al inicio">
+      <span class="cup-gauge" aria-hidden="true" data-cup-gauge>
+        <svg viewBox="0 0 40 40" class="cup-gauge-svg">
+          <defs>
+            <clipPath id="cupClip">
+              <path d="M9 15 h22 l-2.3 15.5c-0.5 3.3-3.3 5.5-6.6 5.5h-4c-3.3 0-6.1-2.2-6.6-5.5Z"/>
+            </clipPath>
+          </defs>
+          <path class="cup-outline" d="M9 15 h22 l-2.3 15.5c-0.5 3.3-3.3 5.5-6.6 5.5h-4c-3.3 0-6.1-2.2-6.6-5.5Z"/>
+          <path class="cup-handle" d="M31 18.5c3.2 0 5.5 2 5.5 4.6s-2.3 4.6-5.5 4.6"/>
+          <rect class="cup-fill" x="8" y="14" width="24" height="26" clip-path="url(#cupClip)" data-cup-fill/>
+          <path class="cup-outline cup-outline-front" d="M9 15 h22 l-2.3 15.5c-0.5 3.3-3.3 5.5-6.6 5.5h-4c-3.3 0-6.1-2.2-6.6-5.5Z"/>
+          <line class="cup-rim" x1="7.5" y1="15" x2="32.5" y2="15"/>
+        </svg>
+      </span>
+      <span class="brand-word">Jayce</span>
+    </a>
+
+    <a class="nav-call" href="tel:+34682120930">
+      <iconify-icon icon="solar:phone-linear" aria-hidden="true"></iconify-icon>
+      <span>682 12 09 30</span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
+      <iconify-icon icon="solar:hamburger-menu-linear" aria-hidden="true" class="icon-open"></iconify-icon>
+      <iconify-icon icon="solar:close-square-linear" aria-hidden="true" class="icon-close"></iconify-icon>
+      <span class="visually-hidden">Abrir menú</span>
+    </button>
+  </div>
+</header>
+
+<!-- Fuera de <header>: el header se anima con GSAP (transform) al cargar,
+     y cualquier transform en un ancestro convierte a este overlay
+     "position: fixed" en un hijo de ESE ancestro en vez de la ventana. -->
+<div id="mobile-nav" class="mobile-nav" hidden>
+  <ul>
+    <li><a href="#lugar">La casa</a></li>
+    <li><a href="#momentos">El día en Jayce</a></li>
+    <li><a href="#sabores">Lo que encontrarás</a></li>
+    <li><a href="#resenas">Reseñas</a></li>
+    <li><a href="#encuentranos">Encuéntranos</a></li>
+    <li><a href="tel:+34682120930">Llamar: 682 12 09 30</a></li>
+  </ul>
+</div>
+
+<main id="contido">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="top">
+    <canvas class="hero-steam" data-steam-scene aria-hidden="true"></canvas>
+    <div class="hero-ring hero-ring-1" aria-hidden="true"></div>
+    <div class="hero-ring hero-ring-2" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+      <p class="hero-eyebrow" data-split-word>Café · Bar · Barrio de Carballo</p>
+      <h1 class="hero-title">
+        <span class="hero-title-word">Jayce</span>
+      </h1>
+      <p class="hero-claim" data-split-word>El café con el que arranca el barrio, la terraza donde se queda.</p>
+
+      <div class="hero-rating" aria-label="4,4 sobre 5 en Google, 87 reseñas">
+        <span class="hero-rating-stars" aria-hidden="true">
+          <iconify-icon icon="solar:star-bold"></iconify-icon>
+          <iconify-icon icon="solar:star-bold"></iconify-icon>
+          <iconify-icon icon="solar:star-bold"></iconify-icon>
+          <iconify-icon icon="solar:star-bold"></iconify-icon>
+          <iconify-icon icon="solar:star-half-bold"></iconify-icon>
+        </span>
+        <span class="hero-rating-text">4,4 · 87 reseñas en Google</span>
+      </div>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:+34682120930">
+          <iconify-icon icon="solar:phone-linear" aria-hidden="true"></iconify-icon>
+          <span>Llamar</span>
+        </a>
+        <a class="btn btn-ghost" href="#encuentranos">
+          <iconify-icon icon="solar:map-point-wave-linear" aria-hidden="true"></iconify-icon>
+          <span>Cómo llegar</span>
+        </a>
+        <a class="btn btn-ghost" href="https://www.facebook.com/p/Cafeter%C3%ADa-Jayce-100083581772036/" target="_blank" rel="noopener noreferrer">
+          <iconify-icon icon="ri:facebook-fill" aria-hidden="true"></iconify-icon>
+          <span>Facebook</span>
+        </a>
+      </div>
+
+      <p class="hero-note">Rúa Río Miño, 18 · Terraza · Comida en el bar</p>
+    </div>
+
+    <div class="scroll-cue" aria-hidden="true">
+      <span>Baja</span>
+      <span class="scroll-cue-line"></span>
+    </div>
+  </section>
+
+  <!-- ===================== LA CASA ===================== -->
+  <section class="lugar" id="lugar" data-reveal-group>
+    <div class="lugar-ring-stamp" aria-hidden="true"></div>
+    <div class="lugar-inner">
+      <h2 data-split-word>Un lugar de barrio</h2>
+      <p class="lugar-lede">
+        Jayce no tiene todavía web propia ni carta publicada — es el tipo de sitio que se conoce
+        de boca en boca, entrando por la puerta. Lo que sí tiene, y de sobra, son clientes que
+        repiten y lo cuentan en Google. Esto es Jayce con sus propias palabras.
+      </p>
+
+      <blockquote class="lugar-quote">
+        <p>«Un lugar acogedor, café riquísimo, ambiente único. Genial… Nada malo que destacar…
+        Recomendable 100%!»</p>
+        <cite>David Juncal Vilas — reseña en Google</cite>
+      </blockquote>
+
+      <blockquote class="lugar-quote lugar-quote-alt">
+        <p>«Los dueños súper amables y familiares, sin duda para repetir.»</p>
+        <cite>jose manuel — reseña en Google</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ===================== EL DÍA EN JAYCE ===================== -->
+  <section class="momentos" id="momentos" data-reveal-group>
+    <div class="momentos-inner">
+      <p class="section-eyebrow">De la barra a la terraza</p>
+      <h2 data-split-word>El día en Jayce</h2>
+
+      <div class="momento-list">
+        <article class="momento">
+          <div class="momento-ring" aria-hidden="true"></div>
+          <div class="momento-num">01</div>
+          <div class="momento-body">
+            <h3>La mañana, de pie en la barra</h3>
+            <p>El arranque del día, café en mano y charla corta con quien atiende.</p>
+            <p class="momento-quote">«Café riquísimo.» <span>— David Juncal Vilas</span></p>
+          </div>
+        </article>
+
+        <article class="momento">
+          <div class="momento-ring" aria-hidden="true"></div>
+          <div class="momento-num">02</div>
+          <div class="momento-body">
+            <h3>El mediodía, tapeo de toda la vida</h3>
+            <p>Oreja, tortilla y hamburguesas son lo que más se repite en las reseñas.</p>
+            <p class="momento-quote">«La oreja y la tortilla lo mejor de lo mejor.» <span>— jose manuel</span></p>
+            <p class="momento-quote">«Las hamburguesas son grandes y bien hechas.» <span>— ana c.s.</span></p>
+          </div>
+        </article>
+
+        <article class="momento">
+          <div class="momento-ring" aria-hidden="true"></div>
+          <div class="momento-num">03</div>
+          <div class="momento-body">
+            <h3>La tarde, en la terraza</h3>
+            <p>Mesa fuera, sin prisa, mientras el barrio pasa por delante.</p>
+            <p class="momento-quote">«Local con terraza perfecto.» <span>— jose manuel</span></p>
+          </div>
+        </article>
+
+        <article class="momento">
+          <div class="momento-ring" aria-hidden="true"></div>
+          <div class="momento-num">04</div>
+          <div class="momento-body">
+            <h3>El cierre, hasta las 23:00</h3>
+            <p>Y para quien no llega a la barra, también salen pedidos para casa.</p>
+            <p class="momento-quote">«Siempre pedimos a domicilio y siempre estupendo.» <span>— Antiq</span></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SABORES ===================== -->
+  <section class="sabores" id="sabores" data-reveal-group>
+    <div class="sabores-inner">
+      <p class="section-eyebrow">Sin carta publicada todavía</p>
+      <h2 data-split-word>Lo que encontrarás</h2>
+      <p class="sabores-lede">
+        Jayce no tiene carta online por ahora. Esta lista recoge solo los platos que sus propios
+        clientes nombran en las reseñas de Google — para ver precios y el resto de la oferta, lo
+        más fiable hoy es llamar o preguntar en la barra.
+      </p>
+
+      <div class="sabores-grid">
+        <div class="sabor-card">
+          <iconify-icon icon="solar:cup-hot-linear" aria-hidden="true"></iconify-icon>
+          <h3>Café</h3>
+          <p class="sabor-price">[PRECIO PENDIENTE]</p>
+        </div>
+        <div class="sabor-card">
+          <iconify-icon icon="solar:chef-hat-linear" aria-hidden="true"></iconify-icon>
+          <h3>Tortilla</h3>
+          <p class="sabor-price">[PRECIO PENDIENTE]</p>
+        </div>
+        <div class="sabor-card">
+          <iconify-icon icon="solar:donut-bitten-linear" aria-hidden="true"></iconify-icon>
+          <h3>Oreja</h3>
+          <p class="sabor-price">[PRECIO PENDIENTE]</p>
+        </div>
+        <div class="sabor-card">
+          <iconify-icon icon="solar:hamburger-linear" aria-hidden="true"></iconify-icon>
+          <h3>Hamburguesas</h3>
+          <p class="sabor-price">[PRECIO PENDIENTE]</p>
+        </div>
+      </div>
+
+      <p class="sabores-note">
+        <iconify-icon icon="solar:delivery-linear" aria-hidden="true"></iconify-icon>
+        También hacen pedidos a domicilio, según cuentan sus clientes habituales.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== RESEÑAS ===================== -->
+  <section class="resenas" id="resenas" data-reveal-group>
+    <div class="resenas-inner">
+      <p class="section-eyebrow">Directo de Google</p>
+      <h2 data-split-word>Lo que dicen</h2>
+
+      <div class="resenas-grid">
+
+        <article class="resena-card">
+          <div class="resena-head">
+            <span class="resena-avatar">A</span>
+            <div>
+              <p class="resena-name">Antiq</p>
+              <p class="resena-meta">4 reseñas · hace un año</p>
+            </div>
+            <span class="resena-stars" aria-hidden="true">★★★★★</span>
+          </div>
+          <p class="resena-text">«Son súper amables atentos y detallistas!!!! La comida riquísima 😊
+          recomendable al 100%. Siempre pedimos a domicilio y siempre estupendo no lo siguiente.»</p>
+          <ul class="resena-tags">
+            <li>Comida 5/5</li><li>Servicio 5/5</li><li>Ambiente 5/5</li>
+          </ul>
+          <p class="resena-reply"><strong>Respuesta del propietario:</strong> «Thank you so much, we're delighted you like it! 🥰»</p>
+        </article>
+
+        <article class="resena-card">
+          <div class="resena-head">
+            <span class="resena-avatar">A</span>
+            <div>
+              <p class="resena-name">ana c.s.</p>
+              <p class="resena-meta">Local Guide · 42 reseñas · hace 3 años</p>
+            </div>
+            <span class="resena-stars" aria-hidden="true">★★★★★</span>
+          </div>
+          <p class="resena-text">«Es la segunda vez que vengo a este local y he de decir que las dos
+          veces ha sido genial. La camarera es una chica super agradable y muy atenta. Las
+          hamburguesas son grandes y bien hechas.»</p>
+          <ul class="resena-tags">
+            <li>Comida 5/5</li><li>Servicio 5/5</li><li>Ambiente 5/5</li>
+          </ul>
+          <p class="resena-reply"><strong>Respuesta del propietario:</strong> «Gracias Ana, encantados de que repitas e che guste 😘»</p>
+        </article>
+
+        <article class="resena-card">
+          <div class="resena-head">
+            <span class="resena-avatar">D</span>
+            <div>
+              <p class="resena-name">David Juncal Vilas</p>
+              <p class="resena-meta">5 reseñas · hace 4 años</p>
+            </div>
+            <span class="resena-stars" aria-hidden="true">★★★★★</span>
+          </div>
+          <p class="resena-text">«Espectacular. Un lugar acogedor, café riquísimo, ambiente único.
+          Genial… Nada malo que destacar… Recomendable 100%!»</p>
+          <p class="resena-reply"><strong>Respuesta del propietario:</strong> «Moitas grazas 😊»</p>
+        </article>
+
+        <article class="resena-card">
+          <div class="resena-head">
+            <span class="resena-avatar">J</span>
+            <div>
+              <p class="resena-name">jose manuel</p>
+              <p class="resena-meta">1 reseña · hace 4 años</p>
+            </div>
+            <span class="resena-stars" aria-hidden="true">★★★★★</span>
+          </div>
+          <p class="resena-text">«Local con terraza perfecto. La oreja y la tortilla lo mejor de lo
+          mejor. Los dueños super amables y familiares, sin duda para repetir.»</p>
+          <p class="resena-reply"><strong>Respuesta del propietario:</strong> «Moitas grazas 😊»</p>
+        </article>
+
+      </div>
+
+      <a class="resenas-cta" href="https://www.google.com/maps/search/?api=1&query=Jayce+Caf%C3%A9+Bar+Carballo" target="_blank" rel="noopener noreferrer">
+        <iconify-icon icon="flat-color-icons:google" aria-hidden="true"></iconify-icon>
+        <span>Ver las 87 reseñas en Google (4,4★)</span>
+        <iconify-icon icon="solar:arrow-right-up-linear" aria-hidden="true"></iconify-icon>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== ENCUÉNTRANOS ===================== -->
+  <section class="encontrar" id="encuentranos" data-reveal-group>
+    <div class="encontrar-inner">
+      <p class="section-eyebrow">Rúa Río Miño, 18</p>
+      <h2 data-split-word>Encuéntranos</h2>
+
+      <div class="encontrar-grid">
+        <ul class="info-list">
+          <li>
+            <iconify-icon icon="solar:map-point-linear" aria-hidden="true"></iconify-icon>
+            <div>
+              <strong>Dirección</strong>
+              <span>Rúa Río Miño, 18, 15102 Carballo, A Coruña</span>
+            </div>
+          </li>
+          <li>
+            <iconify-icon icon="solar:phone-linear" aria-hidden="true"></iconify-icon>
+            <div>
+              <strong>Teléfono</strong>
+              <a href="tel:+34682120930">682 12 09 30</a>
+            </div>
+          </li>
+          <li>
+            <iconify-icon icon="solar:clock-circle-linear" aria-hidden="true"></iconify-icon>
+            <div>
+              <strong>Horario</strong>
+              <span>Hoy cierra a las 23:00. <em>[HORARIO COMPLETO DE LA SEMANA PENDIENTE DE CONFIRMAR]</em></span>
+            </div>
+          </li>
+          <li>
+            <iconify-icon icon="solar:wallet-linear" aria-hidden="true"></iconify-icon>
+            <div>
+              <strong>Precio por persona</strong>
+              <span>1-10 €</span>
+            </div>
+          </li>
+          <li>
+            <iconify-icon icon="solar:sun-2-linear" aria-hidden="true"></iconify-icon>
+            <div>
+              <strong>Servicios</strong>
+              <span>Terraza · Comida en el bar</span>
+            </div>
+          </li>
+          <li>
+            <iconify-icon icon="ri:facebook-fill" aria-hidden="true"></iconify-icon>
+            <div>
+              <strong>Facebook</strong>
+              <a href="https://www.facebook.com/p/Cafeter%C3%ADa-Jayce-100083581772036/" target="_blank" rel="noopener noreferrer">Cafetería Jayce</a>
+            </div>
+          </li>
+        </ul>
+
+        <div class="map-card">
+          <button
+            type="button"
+            class="map-consent"
+            data-map-title="Mapa de ubicación de Jayce en Carballo"
+            data-map-src="https://www.google.com/maps?q=Jayce+Caf%C3%A9+Bar,+R%C3%BAa+R%C3%ADo+Mi%C3%B1o+18,+15102+Carballo&output=embed">
+            <iconify-icon icon="solar:map-point-wave-linear" aria-hidden="true"></iconify-icon>
+            <span>Cargar el mapa</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<a class="call-fab" href="tel:+34682120930" aria-label="Llamar a Jayce">
+  <iconify-icon icon="solar:phone-linear" aria-hidden="true"></iconify-icon>
+</a>
+
+<div class="cookie-banner" role="region" aria-label="Aviso de cookies" hidden>
+  <p>
+    Esta web no usa cookies propias de seguimiento ni publicidad. El mapa de Google solo se carga
+    si haces clic en él — en ese momento Google puede instalar sus propias cookies.
+  </p>
+  <button type="button" class="btn btn-primary cookie-ack">
+    <span>Entendido</span>
+  </button>
+</div>
+
+<footer class="site-footer">
+  <p>Jayce Café-Bar · Rúa Río Miño, 18, Carballo</p>
+  <p class="footer-note">Web no oficial construida a partir de la ficha pública de Google del negocio.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
+<script src="js/scene-steam.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
