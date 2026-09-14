@@ -272,7 +272,12 @@ section h2 { font-size: clamp(2rem, 5vw, 2.9rem); overflow: hidden; }
 .resenas { background: var(--granate-oscuro); color: var(--crema); }
 .resenas-inner { max-width: 66rem; margin: 0 auto; }
 .resenas .section-eyebrow { color: var(--tostado); }
-.resenas-grid { margin-top: 2.4rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1.2rem; }
+/* minmax a 22rem (no 16rem) es deliberado: con el contenedor a 66rem,
+   16rem dejaba caber 3 columnas y las 4 reseñas reales quedaban en 3+1
+   (una tarjeta suelta en la segunda fila). A 22rem solo caben 2, así que
+   las 4 llenan exactamente 2 filas completas sin inventar ni recortar
+   ninguna reseña. */
+.resenas-grid { margin-top: 2.4rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); gap: 1.2rem; }
 .resena-card {
   padding: 1.6rem; border-radius: var(--radio); background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(247, 239, 228, 0.14);
