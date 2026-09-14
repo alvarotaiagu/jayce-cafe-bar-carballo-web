@@ -144,6 +144,51 @@ function initCallFab() {
   });
 }
 
+/* ---------- Horario real (ficha de Google, confirmado por el cliente
+   14-09-2026): lunes a viernes 7:00–23:00, sábado 9:00–24:00, domingo
+   9:00–15:00. Ningún tramo cruza medianoche, así que no hace falta mirar
+   el día anterior como en otras webs hermanas con horario de madrugada. */
+const HOURS = {
+  0: [["09:00", "15:00"]], // Domingo
+  1: [["07:00", "23:00"]], // Lunes
+  2: [["07:00", "23:00"]], // Martes
+  3: [["07:00", "23:00"]], // Miércoles
+  4: [["07:00", "23:00"]], // Jueves
+  5: [["07:00", "23:00"]], // Viernes
+  6: [["09:00", "24:00"]], // Sábado
+};
+
+function toMinutes(hhmm) {
+  const [h, m] = hhmm.split(":").map(Number);
+  return h * 60 + m;
+}
+
+function isOpenNow(date) {
+  const today = HOURS[date.getDay()] || [];
+  const minutes = date.getHours() * 60 + date.getMinutes();
+  return today.some(([open, close]) => minutes >= toMinutes(open) && minutes < toMinutes(close));
+}
+
+function initOpeningHours() {
+  const status = document.getElementById("hours-status-text");
+  const dot = document.querySelector("[data-status-dot]");
+  const list = document.getElementById("hours-list");
+  if (!status || !list) return;
+
+  function update() {
+    const now = new Date();
+    list.querySelectorAll("li").forEach((li) => {
+      li.classList.toggle("is-today", Number(li.dataset.day) === now.getDay());
+    });
+    const open = isOpenNow(now);
+    status.textContent = open ? "Abierto ahora" : "Cerrado ahora";
+    if (dot) dot.classList.toggle("is-closed", !open);
+  }
+  update();
+  setInterval(update, 60000);
+}
+initOpeningHours();
+
 /* ---------- Taza de la cabecera: se llena con el progreso de scroll ----------
    Sustituye a la barra de progreso habitual: un SVG de taza con un
    clip-path cuyo rect sube de altura según cuánto se ha bajado en la
@@ -209,7 +254,7 @@ function runSectionReveals() {
     const heading = group.querySelector("h2");
     const headingWords = heading ? splitMap.get(heading) : null;
     const blocksAll = group.querySelectorAll(
-      ".lugar-lede, .lugar-quote, .sabores-lede, .sabores-note, .resenas-cta, .info-list li, .map-card"
+      ".lugar-lede, .lugar-quote, .sabores-lede, .sabores-note, .resenas-cta, .info-list > li, .map-card"
     );
     const cardsAll = group.querySelectorAll(".momento, .sabor-card, .resena-card");
     // Cada grupo solo contiene un subconjunto de estos selectores — un

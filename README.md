@@ -54,6 +54,18 @@ capturas):
   grazas").
 - Platos citados por los propios clientes en sus reseñas: café,
   hamburguesas, oreja, tortilla, y que hacen pedidos a domicilio.
+- Horario completo de la semana (confirmado por el cliente el
+  14-09-2026, capturado de la ficha de Google): lunes a viernes
+  7:00–23:00, sábado 9:00–24:00, domingo 9:00–15:00. Reflejado en
+  `#encuentranos` (lista completa + estado "Abierto/Cerrado ahora" en
+  vivo) y en el JSON-LD (`openingHoursSpecification`).
+
+**Privacidad de las reseñas**: los nombres de clientes que citamos nunca
+son el nombre completo real — "David Juncal Vilas" se muestra como
+"David J." en todo el sitio (cita de la sección "La casa", tarjeta de
+reseña y cita en "El día en Jayce"). "ana c.s." y "jose manuel" se dejan
+tal cual porque así los muestra Google (sin apellido), no son nombres
+completos.
 
 **⚠️ Pendiente / decisiones marcadas en la propia web — revisar antes de
 enseñarla al dueño:**
@@ -64,11 +76,6 @@ enseñarla al dueño:**
   En cuanto el cliente pase el archivo, sustituir este SVG (y regenerar
   `manifest.json` con iconos PNG reales si se quiere soporte PWA
   completo).
-- **Horario completo de la semana**: la ficha de Google solo mostraba
-  "Abierto · Cierre 23:00" — no el resto de días ni la hora de apertura.
-  La sección Encuéntranos lo deja marcado como
-  `[HORARIO COMPLETO DE LA SEMANA PENDIENTE DE CONFIRMAR]`, sin inventar
-  franjas.
 - **Carta y precios**: no hay carta publicada en ningún sitio (ni web
   previa, ni Facebook). "Lo que encontrarás" es deliberadamente una lista
   corta basada solo en reseñas, no una carta completa inventada.

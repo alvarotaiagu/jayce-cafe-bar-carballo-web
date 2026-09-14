@@ -292,6 +292,26 @@ section h2 { font-size: clamp(2rem, 5vw, 2.9rem); overflow: hidden; }
 .info-list a:hover { color: var(--granate-suave); }
 .info-list em { font-style: normal; color: var(--tostado); font-weight: 600; }
 
+.info-hours > div { flex: 1 1 auto; min-width: 0; }
+.hours-status {
+  display: flex; align-items: center; gap: 0.5rem; margin: 0.2rem 0 0.7rem;
+  font-size: 0.92rem; font-weight: 700; color: var(--tinta);
+}
+.hours-status-dot {
+  width: 0.55rem; height: 0.55rem; border-radius: 50%; background: #4c8a52; flex-shrink: 0;
+  box-shadow: 0 0 0 3px rgba(76, 138, 82, 0.18);
+}
+.hours-status-dot.is-closed { background: var(--granate-suave); box-shadow: 0 0 0 3px rgba(122, 34, 34, 0.16); }
+.hours-list { display: flex; flex-direction: column; gap: 0.4rem; width: 100%; max-width: 20rem; }
+.hours-list li {
+  display: flex; justify-content: space-between; gap: 1rem;
+  font-size: 0.88rem; color: var(--tinta-suave); padding: 0.3rem 0;
+  border-bottom: 1px dashed var(--linea);
+}
+.hours-list li:last-child { border-bottom: none; }
+.hours-list li.is-today { color: var(--tinta); font-weight: 700; }
+.hours-list li.is-today span:first-child::after { content: " · hoy"; font-weight: 600; color: var(--granate-suave); }
+
 .map-card {
   aspect-ratio: 4 / 3; border-radius: var(--radio); overflow: hidden;
   border: 1px solid var(--linea); box-shadow: var(--sombra); background: var(--crema);

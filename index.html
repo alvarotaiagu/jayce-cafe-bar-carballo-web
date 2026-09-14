@@ -43,6 +43,11 @@
     "ratingValue": "4.4",
     "reviewCount": "87"
   },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "07:00", "closes": "23:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "23:59" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "09:00", "closes": "15:00" }
+  ],
   "sameAs": [
     "https://www.facebook.com/p/Cafeter%C3%ADa-Jayce-100083581772036/"
   ]
@@ -171,7 +176,7 @@
       <blockquote class="lugar-quote">
         <p>«Un lugar acogedor, café riquísimo, ambiente único. Genial… Nada malo que destacar…
         Recomendable 100%!»</p>
-        <cite>David Juncal Vilas — reseña en Google</cite>
+        <cite>David J. — reseña en Google</cite>
       </blockquote>
 
       <blockquote class="lugar-quote lugar-quote-alt">
@@ -194,7 +199,7 @@
           <div class="momento-body">
             <h3>La mañana, de pie en la barra</h3>
             <p>El arranque del día, café en mano y charla corta con quien atiende.</p>
-            <p class="momento-quote">«Café riquísimo.» <span>— David Juncal Vilas</span></p>
+            <p class="momento-quote">«Café riquísimo.» <span>— David J.</span></p>
           </div>
         </article>
 
@@ -223,7 +228,7 @@
           <div class="momento-ring" aria-hidden="true"></div>
           <div class="momento-num">04</div>
           <div class="momento-body">
-            <h3>El cierre, hasta las 23:00</h3>
+            <h3>El cierre, según el día</h3>
             <p>Y para quien no llega a la barra, también salen pedidos para casa.</p>
             <p class="momento-quote">«Siempre pedimos a domicilio y siempre estupendo.» <span>— Antiq</span></p>
           </div>
@@ -320,7 +325,7 @@
           <div class="resena-head">
             <span class="resena-avatar">D</span>
             <div>
-              <p class="resena-name">David Juncal Vilas</p>
+              <p class="resena-name">David J.</p>
               <p class="resena-meta">5 reseñas · hace 4 años</p>
             </div>
             <span class="resena-stars" aria-hidden="true">★★★★★</span>
@@ -376,11 +381,23 @@
               <a href="tel:+34682120930">682 12 09 30</a>
             </div>
           </li>
-          <li>
+          <li class="info-hours">
             <iconify-icon icon="solar:clock-circle-linear" aria-hidden="true"></iconify-icon>
             <div>
               <strong>Horario</strong>
-              <span>Hoy cierra a las 23:00. <em>[HORARIO COMPLETO DE LA SEMANA PENDIENTE DE CONFIRMAR]</em></span>
+              <p class="hours-status">
+                <span class="hours-status-dot" data-status-dot aria-hidden="true"></span>
+                <span id="hours-status-text">—</span>
+              </p>
+              <ul class="hours-list" id="hours-list">
+                <li data-day="1"><span>Lunes</span><span>7:00–23:00</span></li>
+                <li data-day="2"><span>Martes</span><span>7:00–23:00</span></li>
+                <li data-day="3"><span>Miércoles</span><span>7:00–23:00</span></li>
+                <li data-day="4"><span>Jueves</span><span>7:00–23:00</span></li>
+                <li data-day="5"><span>Viernes</span><span>7:00–23:00</span></li>
+                <li data-day="6"><span>Sábado</span><span>9:00–24:00</span></li>
+                <li data-day="0"><span>Domingo</span><span>9:00–15:00</span></li>
+              </ul>
             </div>
           </li>
           <li>
