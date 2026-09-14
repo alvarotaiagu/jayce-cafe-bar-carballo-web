@@ -393,7 +393,15 @@ body.has-cookie-banner .call-fab { bottom: 7.5rem; }
 
 /* ============ Accessibility / reduced motion ============ */
 .split-wrap { display: inline-block; }
-.split-word { display: inline-block; overflow: hidden; vertical-align: top; }
+.split-word {
+  display: inline-block; overflow: hidden; vertical-align: top;
+  /* overflow:hidden enmascara la palabra durante el reveal, pero también
+     recorta las descendentes (y, j, q...) si la caja no reserva espacio
+     para ellas — "Jayce" y "queda" perdían la cola de la y/q. El padding
+     reserva ese hueco y el margin negativo lo compensa para no añadir
+     espacio visible al resto del texto. */
+  padding-bottom: 0.22em; margin-bottom: -0.22em;
+}
 .split-word > span { display: inline-block; }
 
 @media (prefers-reduced-motion: reduce) {
